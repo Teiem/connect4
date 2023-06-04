@@ -1,5 +1,6 @@
 import { useEffect, useReducer, useState } from 'react';
 import style from '../styles/Home.module.css';
+import Head from 'next/head';
 
 const enum Action {
     UNDO,
@@ -282,6 +283,11 @@ const ConnectFour = () => {
     const _isOver = isOver(highlight);
 
     return (
+        <>
+        <Head>
+            <title>Connect 4</title>
+            <meta name="description" content="A Connect4 Game, playable using Keyboard and Mouse"></meta>
+        </Head>
         <main className={style.main} data-current-player={currentPlayer} data-is-finished={_isOver}>
             <h1 className={style.title}>Connect 4</h1>
             <div className={style.grid} style={{
@@ -294,6 +300,7 @@ const ConnectFour = () => {
                         className={style.col}
                         onClick={() => handleClick(colIndex)}
                         disabled={isLocked || _isOver}
+                        title={`Column ${colIndex}`}
                     >
                         {grid.map((_, rowIndex) => (
                             <div
@@ -312,6 +319,7 @@ const ConnectFour = () => {
                 <button className={style.menuButton} onClick={reset} disabled={isLocked || history.length === 0}>reset</button>
             </div>
         </main>
+        </>
     );
 };
 
