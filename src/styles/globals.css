@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Mono&family=Inconsolata&family=Poppins:wght@100&family=Roboto+Mono&family=Source+Code+Pro&family=Ubuntu+Mono&display=swap');
-
 :root {
     --color-player-a: #f82955;
     --color-player-b: #232e6b;
@@ -12,8 +10,6 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
-
-    font-family: 'Poppins', sans-serif;
 }
 
 [data-current-player="1"] {
