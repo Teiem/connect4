@@ -238,3 +238,22 @@
     opacity: 1;
     transform: translateY(0);
 }
+
+@media only screen and (max-device-width: 480px) {
+    .main {
+        max-width: initial;
+        max-height: initial;
+        height: 100vh;
+        border-radius: 0;
+        justify-content: space-between;
+    }
+
+    .menu {
+        border-radius: 0;
+    }
+
+    .grid {
+        padding: 0 0.5rem;
+        gap: 0;
+    }
+}
